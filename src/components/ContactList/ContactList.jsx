@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { List, ListItem, Item} from './ContactList.Styled'; 
-import { Button } from './ContactList.Styled';
-
+import React from "react";
+import { List, Item, Button } from './ContactList.Styled'; 
+import { ListItem } from '../ContactListItem/ContactListItem.Styled';
 export const ContactList = ({contacts, onDelete }) => {
     return (
         <List>   
@@ -13,7 +13,7 @@ export const ContactList = ({contacts, onDelete }) => {
         ))}
     </List>
 )
-        }
+        }       
 ContactList.propTypes = {
     onDelete: PropTypes.func.isRequired,
     contacts: PropTypes.arrayOf(PropTypes.exact({
